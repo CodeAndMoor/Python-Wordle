@@ -1,4 +1,7 @@
-def CheckGuessLength():
+from APIMethods import DictionaryAPI as DA
+
+def CheckGuessValidity():
+    #Bools for both loops
     UserGuessing = True
     
     #Guessing Loop
@@ -7,6 +10,8 @@ def CheckGuessLength():
         #Determine if word is 5 letters long
         if len(guess) != 5:
             print("That guess is not 5 letters. Try again")
+        #Determine if word is real
         else:
-            UserGuessing = False
+            UserGuessing == False
+    
     return guess

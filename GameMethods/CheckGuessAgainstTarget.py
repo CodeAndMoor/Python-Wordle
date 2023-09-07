@@ -1,4 +1,4 @@
-def CheckGuess(guess, TargetWord):
+def CheckGuessAgainstTargetWord(guess, TargetWord):
     #Initialize Guess Results for Check Loop
     LetterList = []
 
