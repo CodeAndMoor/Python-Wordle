@@ -21,12 +21,12 @@ def GetWord():
             
             #Check if random word is also contained in the dictionary API
             WordFoundString = DA(data[0])
-            if WordFoundString == False:
+            if WordFoundString == "True":
                 WordFound == True
                 return data[0]
-            if WordFoundString == "Errors":
-                return "Errors"
+        #API Down Block
         else:
+            print("The API seems to be down, please try again later.")
             data = "Errors"
             return data
         

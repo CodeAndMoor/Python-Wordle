@@ -6,7 +6,10 @@ WantsToPlay = True
 
 while WantsToPlay == True:
     #Get word for this play
-    TargetWord = GW()
+    #TargetWord = GW()
+
+    #Debug Line
+    TargetWord = "Shots"
 
     #Handle API Errors
     if TargetWord == "Errors":
@@ -17,7 +20,11 @@ while WantsToPlay == True:
 
     #Main Loop while playing the game
     while UserAttempts <= 6:
-        guess = CGV()             
+        guess = CGV()
+
+        #Stops Game if one of the API's is down
+        if guess == "Errors":
+             break             
 
         #Win Condition
         if guess == TargetWord:
