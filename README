@@ -4,4 +4,4 @@ This is a simple python version of wordle. The application will
 2. Play a round of Wordle for the User
 3. Ask the User if they would like to play again
 
-While the application does check to make sure that a guess is 5 letters, it does not check to see if that word is a valid word. Guesses like aaaaa will count against the users guess total 
+The application will ensure that a user has guessed a 5 letter word and also makes sure the guess is a real word as well
