@@ -1,6 +1,6 @@
 import requests                      as r
 import json                          as j
-from APIMethods import DictionaryAPI as DA
+from APIMethods.DictionaryAPI import CheckWord as DA
 
 #Gets a random, five letter word from an API
 def GetWord():
@@ -20,7 +20,7 @@ def GetWord():
             data = j.loads(response.text)
             
             #Check if random word is also contained in the dictionary API
-            WordFoundString = DA.CheckWord(data[0])
+            WordFoundString = DA(data[0])
             if WordFoundString == False:
                 WordFound == True
                 return data[0]

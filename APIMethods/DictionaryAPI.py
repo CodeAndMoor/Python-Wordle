@@ -2,8 +2,8 @@ import requests as r
 import json     as j
 
 def CheckWord(word):
-    #Word is Real Bool
-    WordIsReal = True
+    #Variable Initialization
+    WordIsRealString = ""
     
     #Base URL of the Dictionary API
     BaseURL = "https://api.dictionaryapi.dev/api/v2/entries/en/"

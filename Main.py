@@ -1,12 +1,12 @@
-from APIMethods  import GetWord                     as GW
-from GameMethods import CheckGuessValidity          as CGV
-from GameMethods import CheckGuessAgainstTargetWord as CGAT
+from APIMethods.GetWordAPI               import GetWord                     as GW
+from GameMethods.GuessValidity           import CheckGuessValidity          as CGV
+from GameMethods.CheckGuessAgainstTarget import CheckGuessAgainstTargetWord as CGAT
 
 WantsToPlay = True
 
 while WantsToPlay == True:
     #Get word for this play
-    TargetWord = GW.GetWord()
+    TargetWord = GW()
 
     #Handle API Errors
     if TargetWord == "Errors":
@@ -17,7 +17,7 @@ while WantsToPlay == True:
 
     #Main Loop while playing the game
     while UserAttempts <= 6:
-        guess = CGV.CheckGuessValidity()             
+        guess = CGV()             
 
         #Win Condition
         if guess == TargetWord:
@@ -25,7 +25,7 @@ while WantsToPlay == True:
             print("You win!") 
         #Check Guess Letters
         else:
-            results = CGAT.CheckGuessAgainstTargetWord(guess, TargetWord)
+            results = CGAT(guess, TargetWord)
             print(results)
             UserAttempts = UserAttempts + 1
 
