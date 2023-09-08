@@ -1,7 +1,7 @@
-This is a simple python version of wordle. The application will
+This is a simple python version of wordle. It uses API's to get the targe word as well as check user guesses to ensure that they are real words as well. 
+
+The application will
 
 1. Get a random 5 letter word from an API
 2. Play a round of Wordle for the User
 3. Ask the User if they would like to play again
-
-The application will ensure that a user has guessed a 5 letter word and also makes sure the guess is a real word as well
